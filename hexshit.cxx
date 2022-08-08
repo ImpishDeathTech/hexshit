@@ -1,3 +1,12 @@
+/*
+* hexshit.cxx
+*
+* BSD 3-Clause License
+*
+* Copyright (c) 2022, Christopher Stephen Rafuse
+* All rights reserved.
+*/
+
 #include "hexshit.hxx"
 #include <cctype>
 #include <fstream>
