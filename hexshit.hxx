@@ -1,5 +1,5 @@
 /*
-* hexshit.cxx
+* hexshit.hxx
 *
 * BSD 3-Clause License
 *
