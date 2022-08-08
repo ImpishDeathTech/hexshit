@@ -1,3 +1,12 @@
+/*
+ * main.cxx
+ *
+ * BSD 3-Clause License
+ *
+ * Copyright (c) 2022, Christopher Stephen Rafuse
+ * All rights reserved.
+ */
+
 #include "hexshit.hxx"
 #include <fstream>
 #include <sstream>
@@ -10,9 +19,13 @@ int main(int ac, char** av) {
 
 	if (ac >= 1) {
 		std::string       input = "";
-
+		
+		/* 
+		 * with these first two blocks, they are simply for testing purposes
+		 * and will be removed in the final program
+		 */
 		if (ac == 1) {
-            char buffer[buffSz];
+            		char buffer[buffSz];
 			code.data = std::move((void*)buffer);
 			code.size = buffSz;
 		}
@@ -21,11 +34,12 @@ int main(int ac, char** av) {
 			ss << av[1];
 			ss >> buffSz;
 
-            char buffer[buffSz];
+            		char buffer[buffSz];
 			
-            code.data = std::move((void*)buffer);
+	            	code.data = std::move((void*)buffer);
 			code.size = buffSz;
 		}
+		// this is where the binary file is loaded, obviously
 		else {
 			std::fstream in(av[1]);
 
@@ -39,7 +53,8 @@ int main(int ac, char** av) {
 			} 
 		}
 	}
-
+	
+	// the (not so) magickal shit begins
 	hexshit(code);
 	
 	return EXIT_SUCCESS;
