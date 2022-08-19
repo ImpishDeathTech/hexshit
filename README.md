@@ -6,4 +6,4 @@ junk. It is intentionally written so it can be both run as a program or included
 
 It's a small program with no external dependancies, it is suggested to compile this with g++, as it has not been tested with other compilers yet; I only use gcc, but by all means, try it with other compilers too! R&D FTW!
 
-`g++ -std=17 -o hs main.cxx hexshit.cxx`
+`g++ -std=c++20 -o hs main.cxx hexshit.cxx`
