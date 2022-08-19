@@ -11,7 +11,6 @@
 #define HEXSHIT_HXX
 
 #include <iostream>
-#include <cstdint>
 
 /*
 * data buffer for containing the original size and pointer to
@@ -20,7 +19,7 @@
 */
 typedef struct {
     void*  data { nullptr };
-    size_t size { 0 };
+    std::size_t size { 0 };
 } DataBuffer;
 
 /*
@@ -28,8 +27,8 @@ typedef struct {
 * DataBuffer's evil twin! AAAAAAAAAA
 */
 typedef struct {
-    uint8_t* data { nullptr };
-    size_t   size { 0 };
+    std::uint8_t* data { nullptr };
+    std::size_t   size { 0 };
 } ByteBuffer;
 
 
