@@ -20,7 +20,7 @@
 typedef struct {
     void*  data { nullptr };
     std::size_t size { 0 };
-} DataBuffer;
+} databuffer_t;
 
 /*
 * Bytecode buffer used to iterate through the bytecode
@@ -29,7 +29,7 @@ typedef struct {
 typedef struct {
     std::uint8_t* data { nullptr };
     std::size_t   size { 0 };
-} ByteBuffer;
+} bytebuffer_t;
 
 
 void hexshit(DataBuffer value);
