@@ -7,8 +7,8 @@
 * All rights reserved.
 */
 
-#ifndef HEXSHIT_HXX
-#define HEXSHIT_HXX
+#ifndef IDT_HEXSHIT_HXX
+#define IDT_HEXSHIT_HXX
 
 #include <iostream>
 
@@ -32,6 +32,6 @@ typedef struct {
 } bytebuffer_t;
 
 
-void hexshit(DataBuffer value);
+void hexshit(databuffer_t value);
 
 #endif
