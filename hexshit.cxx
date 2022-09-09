@@ -13,22 +13,22 @@
 #include <iomanip>
 
 // hexdump function: dumps binary bytecode in a nice, formatted text block
-void hexshit(DataBuffer value) {
+void hexshit(databuffer_t value) {
 	std::stringstream ss;
 	std::string       printable;
 	
 	std::int32_t    indent    = 1,
-			   relPos    = 0,
-			   nulls     = 0,
-			   zeros     = 0,
-	           outLenA   = 0,
-	           outLenB   = 0;
+			relPos    = 0,
+			nulls     = 0,
+			zeros     = 0,
+	           	outLenA   = 0,
+	           	outLenB   = 0;
 
 	std::uint8_t *tempBuf, 
 	              tempChar;
 
-	bool       isEmpty   = false;
-	ByteBuffer buffer    = { (std::uint8_t*)(value.data), value.size };
+	bool          isEmpty   = false;
+	bytebuffer_t  buffer    = { (std::uint8_t*)(value.data), value.size };
 
 	while (buffer.size > 0) {
 		tempBuf    = buffer.data;
